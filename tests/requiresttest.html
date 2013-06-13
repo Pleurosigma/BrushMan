@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<script data-main='../config/config' src='../src/dependencies/require.js'></script>
+		<script>			
+			function start(){
+				console.log(window.BrushMan);
+				var game = new BrushMan.SquareGame('bCanvas');
+			}
+		</script>
+		<style>
+			#bCanvas{
+				background-color: blue;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<canvas id='bCanvas' width='500' height='500'></canvas>
+		<input type='text' />
+	</body>
+
+</html>

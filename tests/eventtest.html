@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<script src='../src/dependencies/easeljs.js'></script>
+		<script src='../src/dependencies/jquery.js'></script>
+		<script src='../src/core/Game.js'></script>
+		<script src='../src/gameobjects/GameObject.js'></script>
+		<script src='../src/core/ControllerState.js'></script>
+		<script>
+			$(init);
+			
+			function init(){
+				console.log(window.BrushMan);
+				var game = new BrushMan.Game('bCanvas');
+			}
+		</script>
+		<style>
+			#bCanvas{
+				background-color: blue;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<canvas id='bCanvas' width='500' height='500'></canvas>
+		<input type='text' />
+	</body>
+
+</html>

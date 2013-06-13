@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<script src='../src/collisions/Vec2.js'></script>
+		<script src='../src/collisions/Polygon.js'></script>
+		<script src='../src/collisions/Smash2d.js'></script>
+		<script>
+			var p1 = new BrushMan.Polygon(				
+				[0,0],
+				[1,0],
+				[1,1],
+				[0,1]
+			);
+			var p2 = new BrushMan.Polygon(
+				[0.5,0.5],
+				[1.5,0.5],
+				[1.5,1.5],
+				[0.5,1.5]
+			);
+			var p3 = new BrushMan.Polygon(
+				[1, 0],
+				[2, 0],
+				[2, 1],
+				[1, 1]
+			);
+			console.log(p1);
+			console.log(p2);
+			console.log(p3);
+			console.log(BrushMan.Smash2d.SAT_Collision(p1.vertices, p2.vertices));
+			console.log(BrushMan.Smash2d.SAT_Collision(p1.vertices, p3.vertices));
+			console.log(BrushMan.Smash2d.pip([.5, .5], p1.vertices));
+			console.log(BrushMan.Smash2d.pip([1,1], p1.vertices));
+			console.log(BrushMan.Smash2d.pip([.1,.1], p1.vertices));
+			console.log(BrushMan.Smash2d.pip([10000,10000], p1.vertices));
+		</script>
+		
+	</head>
+	<body></body>
+</html>

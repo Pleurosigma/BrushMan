@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<!--Core Scripts-->
+		<script src='../../src/dependencies/easeljs.js'></script>
+		<script src='../../src/dependencies/jquery.js'></script>
+		<script src='../../src/core/Game.js'></script>
+		<script src='../../src/core/ControllerState.js'></script>
+		<script src='../../src/core/GameState.js'></script>
+		<script src='../../src/collisions/Polygon.js'></script>
+		<script src='../../src/collisions/Vec2.js'></script>
+		<script src='../../src/collisions/Smash2d.js'></script>
+		<script src='../../src/masters/Master.js'></script>
+		<script src='../../src/managers/StageManager.js'></script>
+		<script src='../../src/elements/Element.js'></script>
+		<script src='../../src/elements/GameObject.js'></script>
+		<script src='../../src/elements/Actor.js'></script>
+		
+		<!--Square Test-->
+		<script src='SquareGame.js'></script>
+		<script src='SquareMaster.js'></script>
+		<script src='SquareStageManager.js'></script>
+		<script src='Square.js'></script>
+		<script>
+			$(init);
+			
+			function init(){
+				console.log(window.BrushMan);
+				console.log([1,2]);
+				var game = new BrushMan.SquareGame('bCanvas');
+			}
+		</script>
+		<style>
+			#bCanvas{
+				border: 1px solid black;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<canvas id='bCanvas' width='500' height='500'></canvas>
+		<input type='text' />
+	</body>
+
+</html>

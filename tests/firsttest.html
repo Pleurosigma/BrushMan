@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script src='../src/dependencies/easeljs.js'></script>
+		<script src='../src/dependencies/jquery.js'></script>
+		<!--<script src='../src/BrushMan.js'></script>-->
+		<script src='../src/core/Game.js'></script>
+		<script src='../src/gameobjects/GameObject.js'></script>
+		<script>
+			$(init);
+			
+			function init(){
+				console.log(window.BrushMan);
+				var go = new BrushMan.GameObject()
+				go.shoutout();
+				var game = new BrushMan.Game();
+			}
+		</script>
+	</head>
+	<body>
+		<canvas id='bCanvas' width='500' height='500'></canvas>
+	</body>
+
+</html>
