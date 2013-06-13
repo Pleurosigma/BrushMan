@@ -1,0 +1,3 @@
+DEPRECATED CLASSES
+The classes in this file are deprecated.
+They have been reclasified as BrushMan.Elements
