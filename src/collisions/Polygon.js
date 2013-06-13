@@ -1,5 +1,24 @@
+/**
+*	Polygon.js
+*	@author Logan Wilkerson
+*	@written 6/2013
+*	@modified 6/12/2013
+*/
 var BrushMan = BrushMan || {};
 (function(){
+	/*
+	*	Polygon
+	*	A polygon represented by its vertices. Each vertex should be
+	*	an Array with vertex[0] being the x component and vertex[1]
+	*	being the y component of the vertex. So for example a unit
+	*	square around the origin point would be represented by
+	*	
+	*	var unitSquare = new BrushMan.Polygon([-.5, .5], [.5, .5], [.5, -.5], [-.5, -.5]);
+	*
+	*	Vertices should be in clockwise order, and the object assumes that between
+	*	each vertex i of n vertices there is an edge between i and i+1 with vertex n 
+	*	connecting back to vertex 0.
+	*/
 	function Polygon(){
 		this.init(arguments);
 	}
