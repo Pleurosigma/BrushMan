@@ -1,3 +1,10 @@
+/**
+*	Element.js
+*	@author Logan Wilkerson
+*	@written 6/10/2013
+*	@modified 6/12/2013
+*/
+
 var BrushMan = BrushMan || {};
 (function(){
 	/*
@@ -8,7 +15,7 @@ var BrushMan = BrushMan || {};
 	*	@param {BrushMan.GameState} The GameState the Element is concerned with
 	*	@param {BrushMan.Master} This Element's Master
 	*	@param {createjs.DisplayObject} This Element's displayObject
-	*	@param {BrushMan.Polygon} This elements bounding polygon.
+	*	@param {BrushMan.Polygon} This elements bounding polygon. It must be a convex polygon.
 	*/
 	function Element(master, controllerState, gameState, displayObject, boundingPolygon){	
 		this.init(controllerState, gameState, master, displayObject, boundingPolygon);
@@ -47,7 +54,8 @@ var BrushMan = BrushMan || {};
 	p.displayObject = null;
 	
 	/**
-	*	The Polygon that bounds this element
+	*	The Polygon that bounds this element. This must be
+	*	a convex polygon.
 	*	@property boundingPolygon
 	*	@type {BrushMan.Polygon}
 	*/
@@ -106,8 +114,10 @@ var BrushMan = BrushMan || {};
 	p.boundingPolygon_yOffset = 0;
 	
 	/*
+	*	init
 	*	Initializes the Element. Should only be called by the constructor or 
 	*	child classes.
+	*
 	*	@param {BrushMan.ControllerState} The ControllerState the Element is concerned with
 	*	@param {BrushMan.GameState} The GameState the Element is concerned with
 	*	@param {BrushMan.Master} This Element's Master
@@ -188,6 +198,9 @@ var BrushMan = BrushMan || {};
 	
 	/*
 	*	clone
+	*	Returns a deep copy of this Element.
+	*
+	*	@returns {BrushMan.Element} The cloned element.
 	*/
 	p.clone = function(){
 		return new Element(

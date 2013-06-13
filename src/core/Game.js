@@ -50,6 +50,7 @@ var BrushMan = BrushMan || {};
 	*	init
 	*	Initializes the game class. Should only be called by
 	*	the game constructor.
+	*
 	*	@param {String} The id of the game canvas
 	*/
 	p.init = function(canvasID){
@@ -62,6 +63,7 @@ var BrushMan = BrushMan || {};
 	/*
 	*	handleEvent
 	*	Function to be called by createjs.Ticker
+	*
 	*	@param {Event} The tick event
 	*/
 	p.handleEvent = function(event){
@@ -71,6 +73,7 @@ var BrushMan = BrushMan || {};
 	/*
 	*	tick
 	*	Actual tick event that is called each game tick
+	*
 	*	@param {Event} The Tick event.
 	*/
 	p.tick = function(event){
